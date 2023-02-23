@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css";
+import axios from 'axios';
 
-export default class App extends React.Component {
+export default class App2 extends React.Component {
   constructor(props){       //constructor
     super(props);
     this.state={            //state object
@@ -12,15 +13,16 @@ export default class App extends React.Component {
   }
 
 componentDidMount(){
-  fetch('items.json')          //you can also use Actual url of API
+  axios.get('https://jsonplaceholder.typicode.com/users')     //Actual url of API
   .then((res)=>res.json())//callback function
   
-  .then(
-    (result)=>{
-      this.setState({isLoaded:true,
-        items:result.items,});//statechange
-},
-(error)=>{
+  .then(response =>{const users=response.date;
+      this.setState({users});//statechange
+  })
+  }
+  
+
+    (error)=>{
   this.setState({
     isLoaded:true,
     error,
