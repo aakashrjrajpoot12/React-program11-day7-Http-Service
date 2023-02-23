@@ -20,3 +20,20 @@ Promise
 A Promise is an object that represents an asynchronous operation.
 
 
+Why Use Axios in React
+...........................
+There are a number of different libraries you can use to make these requests, so why choose Axios?
+
+Here are five reasons why you should use Axios as your client to make HTTP requests:
+
+i)It has good defaults to work with JSON data. Unlike alternatives such as the Fetch API, you often don't need to set your headers. Or perform tedious tasks like converting your request body to a JSON string.
+ii)Axios has function names that match any HTTP methods. To perform a GET request, you use the .get() method.
+iii)Axios does more with less code. Unlike the Fetch API, you only need one .then() callback to access your requested JSON data.
+iv)Axios has better error handling. Axios throws 400 and 500 range errors for you. Unlike the Fetch API, where you have to check the status code and throw the error yourself.
+v)Axios can be used on the server as well as the client. If you are writing a Node.js application, be aware that Axios can also be used in an environment separate from the browser.
+...........................
+Step1:
+...........
+Add dependency of axois
+command:     npm install axios
+
