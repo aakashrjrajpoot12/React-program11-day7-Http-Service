@@ -40,3 +40,12 @@ Step1:
 Add dependency of axois
 command:     npm install axios
 
+
+
+step2:
+..............
+create file inside public
+items.json
+
+
+
