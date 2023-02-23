@@ -1,0 +1,22 @@
+HTTP
+................
+HTTP (Hypertext Transfer Protocol) is the set of rules for transferring files -- such as text, images, sound, video and other multimedia files -- over the web. As soon as a user opens their web browser, they are indirectly using HTTP.
+
+
+Http client
+..................
+
+HTTP is a protocol for fetching resources such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.
+
+What is Axios?
+...................
+https://www.freecodecamp.org/news/how-to-use-axios-with-react/
+...................
+*Axios is used to communicate with the backend
+*Axios is an HTTP client library that allows you to make requests to a given endpoint:
+
+Promise
+...................
+A Promise is an object that represents an asynchronous operation.
+
+
