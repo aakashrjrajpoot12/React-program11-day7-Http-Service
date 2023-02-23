@@ -47,5 +47,13 @@ step2:
 create file inside public
 items.json
 
+step3 1st try to print items by using App.js and items.json(we are not using axios till now)
+           Apple$2
+           Peaches$5 
+
+Step4: we are using Axios now: 
+create App2
+           
+
 
 
