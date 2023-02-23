@@ -29,20 +29,20 @@ componentDidMount(){
   );
 }
 render(){
-  //below line code is called D-structuring
-  const { error,isLoaded,items}=this.state;
-  if(error){
+  //below line code is called Destructure
+  const { error,isLoaded,items}=this.state;//in a single line code i had mentioned that all 3 error,isLoaded,items refers to this.state
+  if(error){ //if error is there then this message would be displayed
     return<div>Error:{error.message}</div>;
   }
-  else if(!isLoaded){
+  else if(!isLoaded){//if isLoaded is not true then Loading msg woild be displayed
     return<div>Loading...</div>;
   }
-  else
+  else//if isLoaded is  true then below msg would be displayed
   {
     return(
         <ul>
-          {items.map((item)=>
-        (<li key={item.id}>
+          {items.map((item)=> //we are using map to traverse items
+        (<li key={item.id}> {/*from item we are using id as key and displaying details */}
           {item.name}{item.price}
           </li>
           ))}
