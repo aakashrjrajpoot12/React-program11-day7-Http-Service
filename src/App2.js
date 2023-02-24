@@ -14,38 +14,22 @@ export default class App2 extends React.Component {
 
 componentDidMount(){
   axios.get('https://jsonplaceholder.typicode.com/users')     //Actual url of API
-  .then((res)=>res.json())//callback function
+  
   
   .then(response =>{const users=response.date;
       this.setState({users});//statechange
   })
   }
-  
 
-    (error)=>{
-  this.setState({
-    isLoaded:true,
-    error,
-  });
-}
-  );
-}
+
+   
 render(){
-  //below line code is called Destructure
-  const { error,isLoaded,items}=this.state;//in a single line code i had mentioned that all 3 error,isLoaded,items refers to this.state
-  if(error){ //if error is there then this message would be displayed
-    return<div>Error:{error.message}</div>;
-  }
-  else if(!isLoaded){//if isLoaded is not true then Loading msg woild be displayed
-    return<div>Loading...</div>;
-  }
-  else//if isLoaded is  true then below msg would be displayed
-  {
+  
     return(
         <ul>
-          {items.map((item)=> //we are using map to traverse items
-        (<li key={item.id}> {/*from item we are using id as key and displaying details */}
-          {item.name}{item.price}
+          {this.persons.map((item)=> 
+        (<li> 
+          {item.name}
           </li>
           ))}
           </ul>
@@ -53,6 +37,6 @@ render(){
       
   }
   }
-  }
+  
 
   
