@@ -6,18 +6,18 @@ export default class App2 extends React.Component {
   constructor(props){       //constructor
     super(props);
     this.state={            //state object
-      error:null,
-      isLoaded:false,
-      items:[],
-    };
+      
+      persons:[]
+    }
   }
 
 componentDidMount(){
-  axios.get('https://jsonplaceholder.typicode.com/users')     //Actual url of API
+  axios.get('http://jsonplaceholder.typicode.com/users')     //Actual url of API
   
   
-  .then(response =>{const users=response.date;
-      this.setState({users});//statechange
+  .then((result) =>{
+      this.setState({persons:result.data.items,
+      });//statechange
   })
   }
 
